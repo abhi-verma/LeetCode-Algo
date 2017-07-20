@@ -27,5 +27,27 @@ class Solution(object):
         
         return True
 
+    def checkRecord1(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        Time Complexity: O(N)
+        """
+        
+        count_absent = 0
+        
+        for chr in s:
+          if chr == 'A':
+            count_absent += 1
+            if count_absent > 1:
+              return False
+        
+        for i in range(0, len(s)-2):
+          if s[i] == 'L' and s[i+1] == 'L' and s[i+2] == 'L':
+            return False
+        
+        return True
+
 a = Solution()
 print(a.checkRecord("PPALLL"))
+print(a.checkRecord1("PPALLL"))
