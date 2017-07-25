@@ -9,6 +9,8 @@ class Solution(object):
         """
         :type head: ListNode
         :rtype: ListNode
+        Time complexity: The total run time is O(n), where nn is the number of nodes in the list.
+        Space complexity: O(1) since no additional space is used.
         """
         curr = head
 
