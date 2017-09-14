@@ -27,6 +27,22 @@ class Solution(object):
         """
         ss = (s + s)[1:-1]
         return ss.find(s) != -1
+    
+    def repeatedSubstringPattern1(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if s[0]*len(s) == s and len(s) != 1:
+          return True
+        
+        for i in range(len(s)//2, 1, -1):
+          if len(s)%i == 0:
+            if s[:i]*(len(s)//i) == s:
+              return True
+        
+        return False
 
 a = Solution()
 print(a.repeatedSubstringPattern('aaa'))
+print(a.repeatedSubstringPattern1('aaa'))
