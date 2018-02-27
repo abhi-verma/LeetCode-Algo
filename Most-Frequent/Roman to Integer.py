@@ -10,7 +10,7 @@ Hint:
 * If X comes before L or C, subtract 10 eg: XL = 40 and XC = 90
 * If C comes before D or M, subtract 100 eg: CD = 400 and CM = 900
 
-Link: https://leetcode.com/problems/two-sum/description/
+Link: https://leetcode.com/problems/roman-to-integer/description/
 
 '''
 class Solution(object):
